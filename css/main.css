@@ -1,3 +1,264 @@
 /*
  * Estilos de tu proyecto
  */
+ *{
+ /*reseteando estilos que vienen por default*/
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+.text-uppercase {
+ text-transform: uppercase; /*poner en mayusculas todo el texto*/
+}
+header {
+ position: fixed; /*fijamos el navegador superior*/
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 110px;
+ background-color: #2c3e50;
+ color: #fff;
+ font-family: 'Montserrat', sans-serif;
+ padding: 35px 8% 35px 10%;
+}
+.top-menu {
+  margin:auto; /*centramos el contenedor*/
+  overflow: auto; /*aplicamos overflow para que los elemento flotantes no slgan de su contenedor padre*/
+}
+.first-title {
+  display: inline-block;
+  font-size: 30px;
+}
+ul {
+  list-style: none;/*quitamos las viñetas que vienen por defecto*/
+  display: inline-block;
+  float: right;/*hacemos que los elementos floten a la derecha contrarios a la posicion de la clase first-title*/
+  margin-right: 25px;
+  font-weight: 900;
+}
+ul li {
+  /*alineamos y separamos los elementos de la lista*/
+  display: inline-block;
+  margin-right: 25px;
+  margin-top: 10px;
+}
+/*APLICAMOS ESTILOS A LA PRIMERA SECCION DE LA PÁGINA*/
+.first-section {
+  width: 100%;/*le damos de ancho 100% para que se acomode a diversos tamaños de pantalla*/
+  height: 690px;
+  margin-top: 110px;/*aplicamos margin-top para que la seccion no se vaya detras del header superior fijado*/
+  padding-top: 90px;
+  color: #fff;
+  background-color: #18bc9c;
+}
+.first-section figure{
+  width: 256px;
+  height: 256px;
+  margin: 0 auto 40px; /*usamos margi:auto para centrar el contenedor de la imagen central*/
+}
+.first-section img {
+  max-width: 100%;/*hacemos que la imagen tome el ancho de su contenedor*/
+}
+.first-section h1 {
+  text-align: center; /*centramos el texto*/
+  font-family: 'Montserrat', sans-serif;
+  font-size: 75px; /*agrandamos el tamaño de letra*/
+}
+hr {
+  /*cambiamos los estilos del hr que afectará a todos los hr de la página*/
+  height: 0;
+  width: 100px;
+  border: 3px solid #fff;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+.star {
+  /*aplicamos estilos al icono de la estrella*/
+  font-size: 30px;
+  width: 250px;
+  margin: 20px auto;/*margin:auto para centrarlo*/
+}
+.first-section p {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  margin-top: 40px;
+}
+/*APLICAMOS ESTILOS A LA PRIMERA SECCION DE LA PÁGINA ("PORTFOLIO")*/
+.second-section {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 110px;
+}
+.hr-blue {
+  border-color: #2c3e50; /*reescribimos el color del hr anterior*/
+}
+
+.star-blue {
+  /*reubicamos la ubicacion del icono estrella y el color*/
+  margin-top: 10px;
+  color: #2c3e50
+}
+.second-section-galery {
+  /*centramos y le damos estilos al contenedor de la galeria de la segunda seccion*/
+  width: 85%;
+  margin: auto;
+  /*column-count: 3;*/
+  overflow: auto;
+  padding-left: 30px;
+}
+.second-section-galery figure {
+  /*ubicamos los contenedores de la imagen*/
+  width: 30%;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  float: left;
+}
+.second-section-galery img {
+  max-width: 100%; /*hacemos que la imagen tome el ancho de su contenedor*/
+}
+.cut {
+  clear: left;/*aplicamos clear:left para que no hayan elemntos flotantes a la iz del elemento y simular un corte para crear una nueva fila*/
+  margin-right: 0;
+}
+/*APLICAMOS ESTILOS A LA PRIMERA SECCION DE LA PÁGINA ("ABOUT")*/
+.third-section {
+  margin-top: 100px;
+  width: 100%;/*aplicamos ancho del 100% para que el tamaño se acomode a diversos tamaños de pantalla*/
+  color: #fff;
+  background-color: #18bc9c;
+  padding-top: 90px;
+}
+.third-section h2 {
+  font-size:40px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;/*centramos el texto*/
+}
+.third-section .text-container {
+  font-family: 'Lato', sans-serif;
+  width: 60%; /*le damos de ancho 60% de du contenedor, es decir 60% del tamaño de pantalla que se este usando */
+  margin: auto;/*centramos el contenedor*/
+  overflow: auto; /*aplicamos overflow auto para que los elemento flotantes no se salgan del contenedor padre*/
+}
+.text-container p {
+  width: 50%; /*le damos de ancho el 50% del contenedor para simular dos columnas */
+  display: inline-block;
+  float: left;/*hacemos que floten a la izquierda para que este lado al lado*/
+  padding-left: 15px;
+  padding-right: 25px;
+  font-size: 20px;
+  line-height: 30px;
+}
+.third-section-button {
+  width: 200px;
+  margin: auto;
+}
+.third-section-button button {
+  /*mejoramos los estilos que vienen por defecto en el elemento button*/
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  background-color: transparent;
+  color:#fff;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  padding: 13px;
+  margin-top: 50px;
+  margin-bottom: 110px;
+}
+.four-section {
+  width: 100%;
+  overflow: auto;
+}
+.four-section h2 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 100px;
+  font-size: 40px;
+}
+.four-section hr {
+  border-color: #2c3e50;
+}
+.four-section .star {
+  color: #2c3e50;
+  margin-top: 15px;
+}
+.contact-me-form {
+  width: 60%;
+  margin: auto;
+  padding-left: 5%;
+  margin-top: 25px;
+}
+input {
+  border:none;
+  outline: none;
+  font-size: 25px;
+  line-height: 30px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-family: 'Lato', sans-serif;
+}
+.contact-me-form hr {
+  height: 0.5px;
+  width: 100%;
+  border:0;
+  background: #e6e6e6;
+}
+.button-form {
+  margin-top: 160px;
+}
+.button-form button {
+  background-color: #18bc9c;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  color:#fff;
+  border-radius: 4px;
+  border: 0;
+  padding: 10px 15px;
+}
+footer {
+  width: 100%;
+  margin-top: 150px;
+  background-color: #2c3e50;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+.footer-information {
+  width: 70%;
+  margin: auto;
+  overflow: auto;
+  padding-top: 3%;
+  margin-bottom: 100px;
+}
+.footer-column {
+  width: 33%;
+  float: left;
+}
+.footer-column h4 {
+  font-size: 28px;
+  margin-bottom: 35px;
+  text-align: center;
+}
+.footer-text{
+  font-size: 18px;
+  text-align: center;
+}
+.icon-text {
+  width:80%;
+  margin: auto;
+}
+.footer-text a{
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+.copyright {
+  text-align: center;
+  font-size: 15px;
+  padding-bottom: 20px;
+}
