@@ -29,6 +29,7 @@ header {
   display: inline-block;
   font-size: 30px;
 }
+
 ul {
   list-style: none;/*quitamos las viñetas que vienen por defecto*/
   display: inline-block;
@@ -36,14 +37,21 @@ ul {
   margin-right: 25px;
   font-weight: 900;
 }
+header a {
+  text-decoration: none;
+  color: #fff;
+}
 ul li {
   /*alineamos y separamos los elementos de la lista*/
   display: inline-block;
   margin-right: 25px;
   margin-top: 10px;
 }
+ul li a:hover {
+  color: #18bc9c;
+}
 /*APLICAMOS ESTILOS A LA PRIMERA SECCION DE LA PÁGINA*/
-.first-section {
+#first-section {
   width: 100%;/*le damos de ancho 100% para que se acomode a diversos tamaños de pantalla*/
   height: 690px;
   margin-top: 110px;/*aplicamos margin-top para que la seccion no se vaya detras del header superior fijado*/
@@ -51,41 +59,46 @@ ul li {
   color: #fff;
   background-color: #18bc9c;
 }
-.first-section figure{
+#first-section figure{
   width: 256px;
   height: 256px;
   margin: 0 auto 40px; /*usamos margi:auto para centrar el contenedor de la imagen central*/
 }
-.first-section img {
+#first-section img {
   max-width: 100%;/*hacemos que la imagen tome el ancho de su contenedor*/
 }
-.first-section h1 {
+#first-section h1 {
   text-align: center; /*centramos el texto*/
   font-family: 'Montserrat', sans-serif;
   font-size: 75px; /*agrandamos el tamaño de letra*/
 }
-hr {
-  /*cambiamos los estilos del hr que afectará a todos los hr de la página*/
-  height: 0;
-  width: 100px;
-  border: 3px solid #fff;
-  margin-bottom: 8px;
-  display: inline-block;
-}
 .star {
-  /*aplicamos estilos al icono de la estrella*/
+  width: 245px;
+  margin: auto;
   font-size: 30px;
-  width: 250px;
-  margin: 20px auto;/*margin:auto para centrarlo*/
+  text-align: center;
 }
-.first-section p {
+/*hacemos las lineas que van antes y después (usando el pseudo elemento after y before) del icono de la estrella*/
+.star::after, .star::before  {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 7px;
+  background: #fff;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.star::before{
+  margin-right: 5px;
+}
+#first-section p {
   text-align: center;
   font-family: 'Lato', sans-serif;
   font-size: 25px;
   margin-top: 40px;
 }
-/*APLICAMOS ESTILOS A LA PRIMERA SECCION DE LA PÁGINA ("PORTFOLIO")*/
-.second-section {
+/*APLICAMOS ESTILOS A LA SEGUNDA SECCION DE LA PÁGINA ("PORTFOLIO")*/
+#second-section {
   width: 100%;
   font-family: 'Montserrat', sans-serif;
   color: #000;
@@ -93,131 +106,136 @@ hr {
   text-align: center;
   padding-top: 110px;
 }
-.hr-blue {
-  border-color: #2c3e50; /*reescribimos el color del hr anterior*/
-}
-
-.star-blue {
-  /*reubicamos la ubicacion del icono estrella y el color*/
-  margin-top: 10px;
+#second-section .star {
+  /*cambiamos el color del icono de la estrella*/
   color: #2c3e50
 }
-.second-section-galery {
-  /*centramos y le damos estilos al contenedor de la galeria de la segunda seccion*/
+#second-section .star::before, #second-section .star::after  {
+  /*cambiamos el fondo de las lineas alrededor del icono de la estrella*/
+  background: #2c3e50;
+}
+#second-section-galery {
+  /*centramos el contenedor de la galeria*/
   width: 85%;
-  margin: auto;
+  margin: 25px auto 0px;
   /*column-count: 3;*/
   overflow: auto;
-  padding-left: 30px;
+  padding-left: 4%;
 }
-.second-section-galery figure {
-  /*ubicamos los contenedores de la imagen*/
+#second-section-galery figure {
+  /*damos tamaño y ubicamos los contenedores de la imagenes*/
   width: 30%;
   margin-right: 30px;
   margin-bottom: 30px;
   float: left;
 }
-.second-section-galery img {
+#second-section-galery img {
   max-width: 100%; /*hacemos que la imagen tome el ancho de su contenedor*/
 }
 .cut {
-  clear: left;/*aplicamos clear:left para que no hayan elemntos flotantes a la iz del elemento y simular un corte para crear una nueva fila*/
-  margin-right: 0;
+  clear: left;/*aplicamos clear:left en el cuarto elemento para que no hayan elemntos flotantes a la iz del él y simular un corte para crear una nueva fila*/
 }
-/*APLICAMOS ESTILOS A LA PRIMERA SECCION DE LA PÁGINA ("ABOUT")*/
-.third-section {
+/*APLICAMOS ESTILOS A LA TERCERA SECCION DE LA PÁGINA ("ABOUT")*/
+#third-section {
   margin-top: 100px;
   width: 100%;/*aplicamos ancho del 100% para que el tamaño se acomode a diversos tamaños de pantalla*/
   color: #fff;
   background-color: #18bc9c;
   padding-top: 90px;
 }
-.third-section h2 {
+#third-section h2 {
   font-size:40px;
   font-family: 'Montserrat', sans-serif;
   text-align: center;/*centramos el texto*/
 }
-.third-section .text-container {
+#third-section .text-container {
   font-family: 'Lato', sans-serif;
-  width: 60%; /*le damos de ancho 60% de du contenedor, es decir 60% del tamaño de pantalla que se este usando */
-  margin: auto;/*centramos el contenedor*/
-  overflow: auto; /*aplicamos overflow auto para que los elemento flotantes no se salgan del contenedor padre*/
+  width: 60%; /*le damos de ancho 60% de du contenedor, es decir 60% del tamaño de la pantalla que se este usando */
+  margin: 20px auto 0;/*centramos el contenedor*/
+  overflow: auto; /*aplicamos overflow:auto para que los elemento flotantes no se salgan del contenedor padre*/
 }
 .text-container p {
   width: 50%; /*le damos de ancho el 50% del contenedor para simular dos columnas */
   display: inline-block;
   float: left;/*hacemos que floten a la izquierda para que este lado al lado*/
-  padding-left: 15px;
-  padding-right: 25px;
+  padding-left: 20px;
+  padding-right: 35px;
   font-size: 20px;
   line-height: 30px;
 }
-.third-section-button {
-  width: 200px;
+#third-section-button {
+  width: 220px;
   margin: auto;
 }
-.third-section-button button {
+#third-section-button button {
   /*mejoramos los estilos que vienen por defecto en el elemento button*/
   font-family: 'Lato', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   background-color: transparent;
   color:#fff;
   border: 2px solid #fff;
   border-radius: 4px;
   padding: 13px;
   margin-top: 50px;
-  margin-bottom: 110px;
+  margin-bottom: 100px;
 }
-.four-section {
+/*APLICANDO ESTILOS A ALA CUARTA SECCION*/
+#four-section {
   width: 100%;
   overflow: auto;
 }
-.four-section h2 {
+#four-section h2 {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   padding-top: 100px;
-  font-size: 40px;
+  font-size: 45px;
 }
-.four-section hr {
-  border-color: #2c3e50;
+#four-section .star {
+  /*cambiamos el color del icono de la estrella*/
+  color: #2c3e50
 }
-.four-section .star {
-  color: #2c3e50;
-  margin-top: 15px;
+#four-section .star::before, #four-section .star::after  {
+  /*cambiamos el fondo de las lineas alrededor del icono de la estrella*/
+  background: #2c3e50;
 }
 .contact-me-form {
   width: 60%;
-  margin: auto;
+  margin: auto; /*centramos el contenedor*/
   padding-left: 5%;
   margin-top: 25px;
 }
-input {
+input, textarea {
+  /*mejoramos los estilos que vienen por defecto en los input*/
+  width: 100%;
   border:none;
   outline: none;
   font-size: 25px;
   line-height: 30px;
   margin-top: 25px;
-  margin-bottom: 25px;
+  padding-bottom: 25px;
   font-family: 'Lato', sans-serif;
+  border-bottom: 0.5px solid #e6e6e6;
 }
-.contact-me-form hr {
-  height: 0.5px;
-  width: 100%;
-  border:0;
-  background: #e6e6e6;
+textarea {
+  /*le da mos tamaño al textarea para que abarque más espacio*/
+  height: 200px;
 }
 .button-form {
-  margin-top: 160px;
+  margin-top: 20px;
 }
 .button-form button {
+  /*aplicamos estilos boton del formulario*/
   background-color: #18bc9c;
-  font-family: 'Lato', sans-serif;
   font-size: 20px;
   color:#fff;
   border-radius: 4px;
   border: 0;
   padding: 10px 15px;
 }
+.button-form button:hover {
+  background-color: #0e6f5d;
+}
+/*APLICANDO ESTILOS A LA ULTMA SECCION ("FOOTER")*/
 footer {
   width: 100%;
   margin-top: 150px;
@@ -225,40 +243,52 @@ footer {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
 }
+/*creamos una seccion para que contenga las tres bloques de informacion*/
 .footer-information {
-  width: 70%;
+  width: 78%;
   margin: auto;
   overflow: auto;
-  padding-top: 3%;
+  padding-top: 4%;
   margin-bottom: 100px;
 }
 .footer-column {
-  width: 33%;
+  width: 350px;
   float: left;
+  margin-bottom: 35px;
 }
-.footer-column h4 {
+.footer-column h3 {
   font-size: 28px;
   margin-bottom: 35px;
   text-align: center;
+
 }
 .footer-text{
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
+  line-height: 30px;
+  font-family: 'Lato', sans-serif;
 }
 .icon-text {
-  width:80%;
-  margin: auto;
+  padding-top: 15px;
+  margin:auto;
 }
-.footer-text a{
+.icon-text a{
   border: 2px solid #fff;
   border-radius: 50%;
   font-size: 20px;
-  padding: 8px;
+  padding: 7px;
   color: #fff;
   text-decoration: none;
 }
+.a-text {
+  text-decoration: none;
+  color:  #18bc9c;
+}
+.a-text:hover {
+  text-decoration: underline; /*para que se subraye al pasar la flecha del mouse*/
+}
 .copyright {
   text-align: center;
-  font-size: 15px;
-  padding-bottom: 20px;
+  font-size: 14px;
+  padding-bottom: 25px;
 }
