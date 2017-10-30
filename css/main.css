@@ -134,6 +134,7 @@ ul li a:hover {
 .cut {
   clear: left;/*aplicamos clear:left en el cuarto elemento simular un corte para crear una nueva fila*/
 }
+
 /*APLICAMOS ESTILOS A LA TERCERA SECCION DE LA PÁGINA ("ABOUT")------------------------------------------------------------*/
 #third-section {
   margin-top: 100px;
@@ -143,10 +144,11 @@ ul li a:hover {
   padding-top: 100px;
 }
 #third-section h2 {
-  font-size:40px;
+  font-size:43px;
   font-family: 'Montserrat', sans-serif;
   text-align: center;/*centramos el texto*/
   padding-top: 20px;
+  padding-bottom: 10px;
 }
 #third-section .text-container {
   font-family: 'Lato', sans-serif;
@@ -158,7 +160,7 @@ ul li a:hover {
   width: 50%; /*le damos de ancho el 50% del contenedor para simular dos columnas */
   display: inline-block;
   float: left;/*hacemos que floten a la izquierda para que este lado al lado*/
-  padding-left: 20px;
+  padding-left: 35px;
   padding-right: 35px;
   font-size: 20px;
   line-height: 30px;
