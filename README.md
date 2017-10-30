@@ -10,10 +10,10 @@
 	- CSS3
   - Google fonts
   - Font-awesome
-5. Resultados Finales
+5. **Resultados Finales:**
 	 *Primera vista de la página*
-	![Recursos](assets/images/view-1.png)
+	![Recursos](assets/images/view-1.png).
   *Vista de la página al hacer scroll*
-	![Recursos](assets/images/view-scroll.png)
+	![Recursos](assets/images/view-scroll.png).
 	*Vista final de la página*
 	![Recursos](assets/images/view-final.png)
