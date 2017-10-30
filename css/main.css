@@ -179,6 +179,10 @@ ul li a:hover {
   margin-top: 50px;
   margin-bottom: 100px;
 }
+#third-section-button button:hover {
+  background-color: #fff;
+  color: #18bc9c;
+}
 /*APLICANDO ESTILOS A ALA CUARTA SECCION*/
 #four-section {
   width: 100%;
