@@ -50,7 +50,7 @@ ul li {
 ul li a:hover {
   color: #18bc9c;
 }
-/*APLICAMOS ESTILOS A LA PRIMERA SECCION DE LA PÁGINA*/
+/*APLICAMOS ESTILOS A LA PRIMERA SECCION DE LA PÁGINA------------------------------------------------------------*/
 #first-section {
   width: 100%;/*le damos de ancho 100% para que se acomode a diversos tamaños de pantalla*/
   height: 690px;
@@ -85,11 +85,10 @@ ul li a:hover {
   width: 100px;
   height: 7px;
   background: #fff;
-  border-radius: 5px;
   margin-bottom: 5px;
 }
 .star::before{
-  margin-right: 5px;
+  margin-right: 5px; /*separamos un poco la 1era linea de*/
 }
 #first-section p {
   text-align: center;
@@ -97,14 +96,14 @@ ul li a:hover {
   font-size: 25px;
   margin-top: 40px;
 }
-/*APLICAMOS ESTILOS A LA SEGUNDA SECCION DE LA PÁGINA ("PORTFOLIO")*/
+/*APLICAMOS ESTILOS A LA SEGUNDA SECCION DE LA PÁGINA ("PORTFOLIO")------------------------------------------------------------*/
 #second-section {
   width: 100%;
   font-family: 'Montserrat', sans-serif;
   color: #000;
   font-size: 30px;
   text-align: center;
-  padding-top: 110px;
+  padding-top: 130px;
 }
 #second-section .star {
   /*cambiamos el color del icono de la estrella*/
@@ -133,20 +132,21 @@ ul li a:hover {
   max-width: 100%; /*hacemos que la imagen tome el ancho de su contenedor*/
 }
 .cut {
-  clear: left;/*aplicamos clear:left en el cuarto elemento para que no hayan elemntos flotantes a la iz del él y simular un corte para crear una nueva fila*/
+  clear: left;/*aplicamos clear:left en el cuarto elemento simular un corte para crear una nueva fila*/
 }
-/*APLICAMOS ESTILOS A LA TERCERA SECCION DE LA PÁGINA ("ABOUT")*/
+/*APLICAMOS ESTILOS A LA TERCERA SECCION DE LA PÁGINA ("ABOUT")------------------------------------------------------------*/
 #third-section {
   margin-top: 100px;
   width: 100%;/*aplicamos ancho del 100% para que el tamaño se acomode a diversos tamaños de pantalla*/
   color: #fff;
   background-color: #18bc9c;
-  padding-top: 90px;
+  padding-top: 100px;
 }
 #third-section h2 {
   font-size:40px;
   font-family: 'Montserrat', sans-serif;
   text-align: center;/*centramos el texto*/
+  padding-top: 20px;
 }
 #third-section .text-container {
   font-family: 'Lato', sans-serif;
@@ -180,10 +180,13 @@ ul li a:hover {
   margin-bottom: 100px;
 }
 #third-section-button button:hover {
+  /*aplicamos estilos para modificar el boton en estado hover*/
   background-color: #fff;
   color: #18bc9c;
 }
-/*APLICANDO ESTILOS A ALA CUARTA SECCION*/
+
+
+/*APLICANDO ESTILOS A ALA CUARTA SECCION ("CONTACT ME")-------------------------------------------------------------*/
 #four-section {
   width: 100%;
   overflow: auto;
@@ -191,7 +194,7 @@ ul li a:hover {
 #four-section h2 {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  padding-top: 100px;
+  padding-top: 120px;
   font-size: 45px;
 }
 #four-section .star {
@@ -253,30 +256,34 @@ footer {
   margin: auto;
   overflow: auto;
   padding-top: 4%;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .footer-column {
-  width: 350px;
+  width: 33%; /*le damos el 33% de ancho para que la columna tome la tercera parte sin importar el tamaño del contenedor*/
   float: left;
   margin-bottom: 35px;
 }
 .footer-column h3 {
+  /*ubicamos los titulos dentro de las columnas*/
   font-size: 28px;
   margin-bottom: 35px;
   text-align: center;
 
 }
 .footer-text{
+  /*ubicamos los parrafos correctamente*/
   font-size: 20px;
   text-align: center;
   line-height: 30px;
   font-family: 'Lato', sans-serif;
 }
 .icon-text {
+  /*centramos nuestro texto de icons*/
   padding-top: 15px;
   margin:auto;
 }
-.icon-text a{
+.icon-text a {
+  /*le damos estilos a nuestros icons encerrados en etiquetas a*/
   border: 2px solid #fff;
   border-radius: 50%;
   font-size: 20px;
@@ -284,14 +291,22 @@ footer {
   color: #fff;
   text-decoration: none;
 }
+.icon-text a:hover, .icon-text i:hover {
+  /*le damos estilos a los icon que estan en etiquetas i y encerrados en etiquetas a */
+  background-color: #fff;
+  color: #18bc9c;
+}
 .a-text {
+  /*le quitamos el color y subrayado que vienen por default en las etiquetas a*/
   text-decoration: none;
   color:  #18bc9c;
 }
 .a-text:hover {
+  /*aplicamos estilos para las etiquetas a en estado hover*/
   text-decoration: underline; /*para que se subraye al pasar la flecha del mouse*/
 }
 .copyright {
+  /*centramos el texto copyright*/
   text-align: center;
   font-size: 14px;
   padding-bottom: 25px;
